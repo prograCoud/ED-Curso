@@ -1,0 +1,58 @@
+/*
+flex-grow
+flex-shrink
+flex-basis
+flex: grow shrink basis;
+align-self
+order
+*/
+
+.container {
+    display : flex;
+    width : 500px;
+    background : lime;
+    height : 400px;
+    /*flex-direction: column-reverse;*/
+}
+
+.item {
+    /*flex: 1 1 auto;*/
+    background : yellow;
+    flex: 5;
+    height : 40px;
+    /*transition: all .3s;*/
+}
+
+.item:nth-child(even) {
+    background : pink;
+}
+
+.item:nth-child(2) {
+    order: -1;
+}
+
+.content {
+    display : flex;
+}
+.main {
+    background : pink;
+    width : 75%;
+}
+.aside {
+    background : tomato;
+    width : 25%;
+}
+
+@media screen and (max-width: 640px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .main, .aside {
+        width : 100%;
+    }
+
+    .aside {
+        order: -1;
+    }
+}
