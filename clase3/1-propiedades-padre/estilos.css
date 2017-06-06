@@ -1,0 +1,16 @@
+ul { margin-left: 2rem; }
+
+.container {
+  padding: 1rem;
+  margin: auto;
+  width: 80vw;
+  height: 50vh;
+  border: medium solid #333;
+  background-color: steelblue;
+}
+
+.item {
+  border: thin solid #333;
+  font-size: 2rem;
+  background-color: deepskyblue;
+}
