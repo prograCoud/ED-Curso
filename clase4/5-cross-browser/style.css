@@ -1,67 +1,63 @@
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header {
-  background: pink;
-  width: 100%;
-  height: 64px;
+    background: pink;
+    width: 100%;
+    height: 64px;
 }
 
 main, aside {
-  min-height: 300px;
+    min-height: 300px;
 }
 
 main {
-  background: yellow;
-  width: 75%;
+    background: yellow;
+    width: 75%;
 }
 
 aside {
-  background: red;
-  width: 25%;
+    background: red;
+    width: 25%;
 }
 
 footer {
-  background: lime;
-  width: 100%;
-  height: 64px;
+    background: lime;
+    width: 100%;
+    height: 64px;
 }
 
-@supports (grid-template-areas: "header") {
-  body {
-    display: -ms-grid;
-    display: grid;
-    grid-template-areas: "header header" "main aside" "footer footer";
-    -ms-grid-columns: 75% 25%;
+@supports (grid-template-areas: "header"){
+    body {
+        display: grid;
+        grid-template-areas: "header header"
+        "main aside"
+        "footer footer";
         grid-template-columns: 75% 25%;
-    -ms-grid-rows: 64px 1fr 64px;
         grid-template-rows: 64px 1fr 64px;
-  }
+        min-height : 100vh;
+    }
 
-  header {
-    grid-area: header;
-  }
+    header {
+        grid-area: header;
+    }
 
-  main {
-    grid-area: main;
-    background: magenta;
-  }
+    main {
+        grid-area: main;
+        background: magenta;
+    }
 
-  aside {
-    grid-area: aside;
-  }
+    aside {
+        grid-area: aside;
+    }
 
-  main, aside {
-    width: 100%;
-  }
+    main, aside {
+        width: 100%;
+    }
 
-  footer {
-    grid-area: footer;
-  }
+    footer {
+        grid-area: footer;
+    }
 }
