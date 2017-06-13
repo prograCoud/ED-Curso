@@ -1,0 +1,145 @@
+body {
+    background : #f0f0f0;
+}
+.row {
+    display : flex;
+    flex-wrap: wrap;
+    width : 100%;
+    margin-left : auto;
+    margin-right : auto;
+    max-width : 1200px;
+}
+
+.column {
+    padding-left : 1em;
+    padding-right : 1em;
+}
+
+
+
+.main-header-container{
+    background : #fff;
+    height : 64px;
+    border-bottom : 1px solid #ccc;
+    margin-bottom : 2em;
+}
+
+.main-footer-container {
+    background : #fff;
+    height : 64px;
+    border-top : 1px solid #ccc;
+    margin-top : 2em;
+}
+
+.main-header,
+.main-footer {
+    height : 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight : bold;
+}
+
+
+.main-aside,
+.main {
+    width : 100%;
+    margin-bottom : 2em;
+}
+
+
+
+.section-title, .page-title, .block__title {
+    margin : 0 0 1em;
+}
+
+.news-container {
+    margin-bottom : 2em;
+}
+
+.news-item {
+    margin-bottom : 1em;
+}
+
+.news-item.featured {
+    grid-row: span 2;
+}
+
+.news-item .news-item__description {
+    display : none;
+}
+
+.featured .news-item__description{
+    display : block;
+}
+
+.news-item__img {
+    width : 100%;
+    display : block;
+}
+
+.news-item__title {
+    margin-top : .5em;
+    font-size : 1.2em;
+}
+
+.news-item.featured {
+    position : relative;
+}
+
+
+.news-item__body {
+    margin-top : .5em;
+}
+
+.news-item__body .news-item__title {
+    margin : 0 0 .5em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 2fr repeat(2,1fr);
+    grid-gap: 2px;
+    grid-auto-flow: row dense;
+}
+
+.gallery-item:nth-child(5n) {
+    grid-column: span 2;
+}
+
+.gallery-item:nth-child(7n) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-img {
+    display : block;
+    width : 100%;
+    height : 100%;
+    object-fit: cover;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .main-aside {
+        width : 25%;
+    }
+
+    .main {
+        width : 75%;
+    }
+
+    .news-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-gap: 1em;
+    }
+
+    .news-item__body {
+        position : absolute;
+        width : 100%;
+        background : rgba(0,0,0,.8);
+        bottom : 0;
+        padding : 1em;
+        color: #fff;
+    }
+}
