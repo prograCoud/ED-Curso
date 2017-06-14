@@ -8,7 +8,7 @@ En los últimos años muchos ingenieros de front-end con experiencia han ofrecid
 
 Mientras que muchos desarrolladores (por buenas razones) se centran en gran medida en el rendimiento de JavaScript, suelen olvidarse de la optimización del CSS.
 
-Su propósito es para fomentar la reutilización de código y generar hojas de estilo más rápidas y eficientes que son más fáciles de añadir a y mantener.
+Su propósito es fomentar la reutilización de código y generar hojas de estilo más rápidas y eficientes que son más fáciles de añadir y mantener.
 
 Se basa en dos principios fundamentales:
 
@@ -17,9 +17,9 @@ Se basa en dos principios fundamentales:
 
 ## SEPARA LA ESTRUCTURA (HTML), DE LA PRESENTACIÓN (CSS)
 
-Casi todos los elementos de una página Web de estilo tiene diferentes características visuales que se repiten en diferentes contextos. Piense en la marca de un sitio web: los colores, usos sutiles de gradientes o bordes visibles. Por otro lado, las estructuras igualmente se repiten.
+Casi todos los elementos de estilo de una página web tiene diferentes características visuales que se repiten en diferentes contextos. Piense en la marca de un sitio web: los colores, usos sutiles de gradientes o bordes visibles. Por otro lado, las estructuras igualmente se repiten.
 
-Cuando estas características diferentes se abstraen en módulos basados en clases, se convierten reutilizable y se puede aplicar a cualquier elemento y tienen el mismo resultado básico. Vamos a comparar algunos antes y después de código para que pueda ver lo que estoy hablando.
+Cuando estas características diferentes se abstraen en módulos basados en clases, se convierten en reutilizables y se puede aplicar a cualquier elemento y tienen el mismo resultado básico. Vamos a comparar algunos antes y después de código para que pueda ver lo que estoy hablando.
 
 Antes de aplicar los principios OOCSS, es posible que tenga CSS que tiene este aspecto:
 
@@ -95,7 +95,7 @@ El segundo principio nos dice que hay que separar los contenedores de su conteni
 }
 ```
 
-Estos estilos se aplicarán a cualquier h3 que este dentro de #sidebar. Pero si quisieramos aplicar exactamente los mismos estilos alos h3 de un #footer, con excepción de un tamaño de fuente diferente y una sombra al texto modificado, entonces tendríamos que hacer algo como esto:
+Estos estilos se aplicarán a cualquier h3 que este dentro de #sidebar. Pero si quisieramos aplicar exactamente los mismos estilos a los h3 de un #footer, con excepción de un tamaño de fuente diferente y una sombra al texto modificado, entonces tendríamos que hacer algo como esto:
 
 ```css
 #sidebar h3, #footer h3 {
@@ -132,9 +132,9 @@ O podríamos terminar con algo peor:
 }
 ```
 
-Ahora innecesariamente duplicamos estilos , y puede ser que no se den cuenta (o simplemente no les importa).
+Ahora innecesariamente duplicamos estilos, y puede ser que no se den cuenta (o simplemente no les importa).
 
-OOCSS, nos anima a dar más previsión a lo que es común entre los diferentes elementos, separar esas características comunes en módulos u objetos, que pueden ser reutilizados en cualquier lugar
+OOCSS, nos anima a dar más previsión a lo que es común entre los diferentes elementos, separar esas características comunes en módulos u objetos, que pueden ser reutilizados en cualquier lugar.
 
 Los estilos que se declaran utilizando el selector descendiente no son reutilizable , ya que son dependientes de un contenedor en particular.
 
@@ -145,7 +145,6 @@ Cuando usamos la construcción del módulo basado en la clase de OOCSS, nos aseg
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1;
   color: #777;
-  text-shadow: rgba(0, 0, 0, .3) 3px 3px 6px;
 }
 
 .font-2 { font-size: 2em; }
@@ -167,4 +166,4 @@ Cuando usamos la construcción del módulo basado en la clase de OOCSS, nos aseg
   * !important
   * Clases a las etiquetas HTML pe div.header o h1.title
 
-Obviamente habrá ocasiones en que algunas de estas reglas será quebrado, pero en general, estos son los buenos hábitos para desarrollar y dará lugar a las hojas de estilo que son más pequeños y más fáciles de mantener.
+Obviamente habrá ocasiones en que algunas de estas reglas será quebrada, pero en general, estos son los buenos hábitos para desarrollar y dará lugar a hojas de estilo más pequeñas y fáciles de mantener.
