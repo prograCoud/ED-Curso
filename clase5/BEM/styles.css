@@ -1,0 +1,55 @@
+/*
+BEMIT -> Variacion de BEM con la metodología ITCSS
+    u-
+    c-
+    l-
+
+Bloque  -> OOCSS (componente) SMACSS (modulo) -> Pieza independiente de UI
+    Pueden llevar guion intermedio (como prefijos)
+        menu-container
+
+Elemento -> Cada elemento que conforma el bloque
+    Se separan del bloque con doble guion bajo __
+
+Modificador -> Una variante del bloque
+    Se separan de su elemento o bloque con doble guion medio
+
+*/
+
+.menu {
+    margin-top : 0;
+    margin-bottom : 0;
+    padding-left : 0;
+    list-style: none;
+    display : flex;
+}
+
+.submenu {
+    position : absolute;
+    top : 100%;
+    display : none;
+}
+
+.menu__link {
+    text-decoration : none;
+    color: #555;
+    display : block;
+    padding : 0 1.5em;
+}
+
+.menu__item {
+    border-right : 1px solid;
+    position : relative;
+}
+
+.menu__item--sub {
+    border-right :none;
+}
+
+.menu__item:last-child {
+    border-right :none;
+}
+
+.menu__item:hover .submenu {
+    display : block;
+}
