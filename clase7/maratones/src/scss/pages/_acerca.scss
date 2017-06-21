@@ -1,0 +1,48 @@
+.About {
+  display: grid;
+  grid-template: {
+    columns: 100%;
+    rows: repeat(3, fit-content);
+  }
+  grid-gap: 2rem;
+  justify-items: center;
+}
+
+.MarathonHistory {
+  max-width: 1200px;
+  display: grid;
+  grid-template: {
+    columns: repeat(3, 1fr);
+    rows: repeat(13, fit-content);
+  }
+  grid-gap: 1vw;
+  grid-auto-flow: row dense;
+  color: #FFF;
+
+  &-item {
+    border: medium solid #FFF;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    & img {
+      flex: auto;
+      object-fit: cover;
+      transition: all 1s ease-out;
+
+      &:hover { transform: scale(1.5); }
+    }
+
+    & p {
+      flex: auto;
+      padding: 1rem;
+      font-size: 3vw;
+
+      @media screen and (min-width: 64em) { font-size: 2vw; }
+    }
+  }
+}
+
+.WindowGallery {
+
+}

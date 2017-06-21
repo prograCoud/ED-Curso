@@ -1,0 +1,60 @@
+extends ../includes/layout.pug
+include ../includes/components/header_poster.pug
+block metatags
+  -var title = 'Orígenes - M A R A T Ó N'
+  -var description = 'En esta sección te explicamos todo sobre el origen de la Maratón.'
+  title= title
+  meta(name="description", content=description)
+  meta(name="application-name", content=title)
+block content
+  main.About
+    +headerPoster('./img/acerca-runners-steps.jpg', 'MARATÓN', '42.195km')
+    article.MarathonHistory
+      .MarathonHistory-item.c1xr1
+        img(src="./img/historia-start.jpg")
+      .MarathonHistory-item.c2xr1
+        p <b>Un maratón</b> o <b>una maratón</b> es una carrera de larga distancia que consiste en correr <b>42.195 km</b>.
+      .MarathonHistory-item.c2xr2
+        img(src="./img/historia-1.jpg")
+      .MarathonHistory-item.c3xr1
+        p.u-center <b>E L&nbsp;&nbsp;M I T O</b><br><b>Batalla de Maratón (490 AC)</b>
+      .MarathonHistory-item.c1xr1
+        img(src="./img/historia-2.jpg")
+      .MarathonHistory-item.c1xr1
+        img(src="./img/historia-3.jpg")
+      .MarathonHistory-item.c1xr1
+        img(src="./img/historia-4.jpg")
+      .MarathonHistory-item.c2xr1
+        p El nombre proviene de la leyenda de <b>Filípides</b>, un mensajero griego, que habría sido enviado desde la bahía de Maratón a la metropolis de Atenas (40kms) con el objetivo de anunciar la victoria de los griegos frente a los persas.
+      .MarathonHistory-item.c1xr2
+        p Si no llegaba a tiempo, los atenienses quemarían la ciudad y matarían a los niños ante la creencia de haber sido derrotados.
+      .MarathonHistory-item.c2xr2
+        img(src="./img/historia-5.jpg")
+      .MarathonHistory-item.c2xr2
+        p Afortunadamente, habría logrado la hazaña, y luego de correr los 40kms con sus últimas fuerzas, se habría desplomado frente a Atenas ante el grito de <b><i>nenikhamen o nike</i></b>, que significa <b><i>“hemos vencido”</i></b>.
+      .MarathonHistory-item.c1xr2
+        img(src="./img/historia-6.jpg")
+      .MarathonHistory-item.c3xr1
+        p Aunque la leyenda es muy bonita, existen algunos debates sobre la precisión de estos hechos, ya que existirían registros de que Filípides habría corrido, antes de la Batalla de Maratón, desde Atenas hasta Esparta (240km) a fin de solicitar refuerzos y luego volvió.
+      .MarathonHistory-item.c3xr1
+        img(src="./img/historia-7.jpg")
+      .MarathonHistory-item.c3xr1
+        p.u-center <b>E N&nbsp;&nbsp;J U E G O S&nbsp;&nbsp;O L Í M P I C O S</b>
+      .MarathonHistory-item.c1xr2
+        p Forma parte del programa de atletismo desde <b>Atenas 1896</b>, en la categoría <b>masculina</b>, y desde <b>Los Ángeles 1984</b>, en la <b>femenina</b>.
+      .MarathonHistory-item.c2xr2
+        img(src="./img/historia-8.jpg")
+      .MarathonHistory-item.c1xr1
+        img(src="./img/historia-9.jpg")
+      .MarathonHistory-item.c2xr1
+        p El primer maratón olímpico se realizó el <b>10 de abril de 1896</b> y su ganador fue <b>Spyridon Louis</b>, un griego que corrió desde la llanura de Maratón hasta el estadio olímpico de Atenas (<b>40 kms</b>) en <b>2:58:50 hrs</b>.
+      .MarathonHistory-item.c1xr2
+        p Sin embargo, la distancia fue variando a lo largo de los años, hasta que en 1908 en los Juegos de Londres para que la Reina pudiera ver la salida desde el Castillo Windsor extendieron la distancia a los <b>42.195 km</b>.
+      .MarathonHistory-item.c2xr2
+        img(src="./img/historia-10.jpg")
+      .MarathonHistory-item.c2xr1
+        p Finalmente, en 1921 la Asociación Internacional de Federaciones Atléticas fijó en forma definitiva que, la maratón consistiría en <b>42.195 km o 26.2 millas</b>.
+      .MarathonHistory-item.c1xr1
+        img(src="./img/historia-finish.jpg")
+    aside.WindowGallery
+      h1 galeria
