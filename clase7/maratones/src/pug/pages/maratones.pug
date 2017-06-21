@@ -1,0 +1,49 @@
+extends ../includes/layout.pug
+include ../includes/components/header_poster.pug
+block metatags
+  -var title = 'Los 6 Mayores  - M A R A T Ó N'
+  -var description = 'En esta sección te mostramos los 6 maratones más importantes del mundo conocidos como Maratones Mayores'
+  title= title
+  meta(name="description", content=description)
+  meta(name="application-name", content=title)
+block content
+  main.Marathons
+    +headerPoster('./img/maratones-abbott-medal.jpg', 'ABBOTT World', 'Marathons Majors')
+    -var logos = [ ['http://www.marathon.tokyo/', './img/maratones-tokyo-logo.png'], ['http://www.baa.org/', './img/maratones-boston-logo.jpg'], ['https://www.virginmoneylondonmarathon.com/', './img/maratones-london-logo.jpg'], ['http://www.bmw-berlin-marathon.com/', './img/maratones-berlin-logo.png'], ['https://www.chicagomarathon.com/', './img/maratones-chicago-logo.png'], ['http://www.tcsnycmarathon.org/', './img/maratones-new-york-logo.jpg'] ]
+    article.Marathons-logos
+      .Marathons-logosText
+        p El <b><i>Abbott World Marathon Majors</i></b> es una serie compuesta por seis de los maratones más grandes y famosos del mundo. Las carreras tienen lugar en Tokio, Boston, Londres, Berlín, Chicago y Nueva York.
+      each logo in logos
+        .Marathons-logosItem
+          a.Marathons-logosLink(href=logo[0], target="_blank")
+            img.Marathons-logosImage(src=logo[1])
+    +headerPoster(
+      './img/maratones-tokyo-panorama.jpg',
+      'Tokyo',
+      '<small>desde 2007<br>se corre el último domingo de febrero</small>'
+    )
+    +headerPoster(
+      './img/maratones-boston-panorama.jpg',
+      'Boston',
+      '<small>desde 1897<br>se corre el tercer lunes de abril</small>'
+    )
+    +headerPoster(
+      './img/maratones-london-panorama.jpg',
+      'Londres',
+      '<small>desde 1981<br>se corre el último domingo de abril</small>'
+    )
+    +headerPoster(
+      './img/maratones-berlin-panorama.jpg',
+      'Berlín',
+      '<small>desde 1974<br>se corre el último domingo de septiembre</small>'
+    )
+    +headerPoster(
+      './img/maratones-chicago-panorama.jpg',
+      'Chicago',
+      '<small>desde 1977<br>se corre el domingo antes del segundo lunes de octubre</small>'
+    )
+    +headerPoster(
+      './img/maratones-new-york-panorama.jpg',
+      'Nueva York',
+      '<small>desde 1970<br>se corre el primer domingo de noviembre</small>'
+    )

@@ -56,5 +56,11 @@ block content
         p Finalmente, en 1921 la Asociación Internacional de Federaciones Atléticas fijó en forma definitiva que, la maratón consistiría en <b>42.195 km o 26.2 millas</b>.
       .MarathonHistory-item.c1xr1
         img(src="./img/historia-finish.jpg")
+    -var imgs = [ './img/acerca-1.jpg', './img/acerca-2.jpg', './img/acerca-3.jpg', './img/acerca-4.jpg' ]
     aside.WindowGallery
-      h1 galeria
+      header.WindowGallery-title
+        h2 4 2 . 1 9 5<br>k m
+      b.WindowGallery-clipPath
+      each img in imgs
+        figure.WindowGallery-item
+          img.WindowGallery-image(src=img)

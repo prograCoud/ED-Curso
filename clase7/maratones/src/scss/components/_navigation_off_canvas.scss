@@ -161,6 +161,8 @@ $hamburger-color: #0096D9;
       align-items: center;
     }
 
+    &-link { border-top: medium solid transparent; }
+
     &-link:hover {
       border-top: medium solid $header-color;
       background-color: transparent;
