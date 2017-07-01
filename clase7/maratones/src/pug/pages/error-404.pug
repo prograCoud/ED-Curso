@@ -1,0 +1,11 @@
+extends ../includes/layout.pug
+include ../includes/components/header_poster.pug
+block metatags
+  -var title = 'Error 404 - M A R A T Ó N'
+  -var description = '¿km 404? Parece que te has perdido'
+  title= title
+  meta(name="description", content=description)
+  meta(name="application-name", content=title)
+block content
+  main.Error404
+    +headerPoster('./img/error-404.jpg', '¿km 404?', 'Parece que te has perdido')

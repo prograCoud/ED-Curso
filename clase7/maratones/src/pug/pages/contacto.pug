@@ -1,0 +1,18 @@
+extends ../includes/layout.pug
+include ../includes/components/header_video.pug
+include ../includes/components/social_media.pug
+include ../includes/components/contact_form.pug
+block metatags
+  -var title = 'Contacto - M A R A T Ó N'
+  -var description = '¿Te gusto este sitio? Déjanos tus comentarios y visita nuestras redes sociales.'
+  title= title
+  meta(name="description", content=description)
+  meta(name="application-name", content=title)
+block content
+  main.Contact
+    section.Contact-video
+      +headerVideo('contacto-runner', '¿Te gustó este sitio?', 'Déjanos tus comentarios y visita nuestras redes sociales.')
+    section.Contact-info
+      +contactForm()
+      +socialMedia([ ['github', 'http://github.com/jonmircha'], ['youtube', 'http://youtube.com/bextlancom'], ['envelope', 'mailto:jonmircha@gmail.com'], ['twitter', 'http://twitter.com/@jonmircha'], ['codepen', 'http://codepen.io/jonmircha/'] ])
+    section.GoogleMap

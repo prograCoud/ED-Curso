@@ -1,5 +1,11 @@
 .u-center { text-align: center; }
 
+.u-flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .c1xr1 {
   grid-column: span 1;
   grid-row: span 1;
